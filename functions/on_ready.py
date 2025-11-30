@@ -15,7 +15,7 @@ class On_Ready(commands.Cog):
             synced = await self.bot.tree.sync()
             print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Synced {len(synced)} command(s)")
 
-            activity = discord.CustomActivity("")
+            activity = discord.CustomActivity("UwU")
             await self.bot.change_presence(status=discord.Status.online, activity=activity)
             print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Bot presence defined")
 
@@ -24,3 +24,4 @@ class On_Ready(commands.Cog):
 
 async def setup(bot: commands.Bot):
     await bot.add_cog(On_Ready(bot))
+
